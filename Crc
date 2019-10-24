@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+int crc(char *cw, char *mcw, char *d, int f)
+{
+    strcpy(mcw,cw);
+    if(f)
+    {
+        for (int i=1;i<strlen(d);i++)
+            strcat(mcw,"0");
+    }
+    for(int i=0;i<strlen(cw);i++)
+    {
+        if(mcw[i]=='1')
+        {
+            for(int j=0;j<strlen(d);j++)
+            {
+                if(mcw[i+j]==d[j])
+                    mcw[i+j]='0';
+                else
+                    mcw[i+j]='1';
+            }
+        }
+    }
+    if(f==0)
+    for (int i=0;i<strlen(mcw);i++)
+        if (mcw[i]=='1')
+            return 0;
+    return 1;
+}
+
+int main()
+{
+    char cw[50],mcw[50], rec[50],flag=0;
+    char d[] = "10001000000100001";
+    cout << "Enter the message"<< endl;
+    cin >> cw;
+    crc(cw,mcw,d,1);
+    cout << "The transmitted message is: " <<cw<<mcw+strlen(cw)<<endl;
+    cout << "Enter the recevied message in binary" << endl;
+    cin >> rec;
+    flag=crc(rec,mcw,d,0);
+    if(flag)
+        cout << "No error" << endl;
+    else
+        cout << "Error encountered" << endl;
+
+    return 0;
+}
