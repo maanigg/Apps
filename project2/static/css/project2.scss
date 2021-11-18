@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+$primarycolor:#B100E6;
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+}
+body{
+background-image: linear-gradient(to bottom, #F0F0F0 , #DCDCDC);
+}
+.intro-text{
+    display: inline-table;
+    position: absolute;
+    top: 40%;
+    right: 1%;
+    transform: translate(-1%,-40%);
+    color: black;
+    text-align: center;
+    form{
+        animation-name: comeup;
+        animation-duration: 3s;
+        margin-right:38px ;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        label{
+            text-transform: uppercase;
+            font-size: x-large;
+            font-weight: 500;
+        }
+        input{
+            display: block;
+            border: 2px solid $primarycolor ;
+            border-radius: 30px;
+            margin: 20px auto ;
+            background-color: transparent;
+            padding: 8px;
+        }
+        button{
+            align-self: center;
+            padding: 5px;
+            font-weight: 500;
+            display: block;
+            color: whitesmoke;
+            width:150px;
+            background-color: $primarycolor;
+            transition: 0.5s ease;
+            border: 1px solid #B100E6 ;
+            border-radius: 30px;
+            cursor: pointer;
+            text-transform: uppercase;
+            &:hover{
+                background-color: transparent;
+                color: #B100E6;
+            }
+        }
+    }
+}
+.link{
+    position: absolute;
+    top: 10%;
+    right: 6%;
+    transform: translate(-6%,-10%);
+}
+.connect{
+    position: absolute;
+    top: 61.5%;
+    right: 5.5%;
+    transform: translate(-5.5%,-61.5%);
+    padding: 8px;
+    display: block;
+    font-weight: 500;
+    color: #B100E6;
+    width:200px;
+    background-color: transparent;
+    transition: 0.5s ease;
+    border: 2px solid #B100E6 ;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:hover{
+        color: whitesmoke;
+        background-color: #B100E6;
+    }
+}
+.title{
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    .chat{
+        color:#B100E6;
+    }
+    .mate{
+        color: black;
+    }
+    display: inline-flex;
+}
+#footer{
+    position: absolute;
+    bottom: 3.5%;
+    right: 5%;
+}
+@keyframes comeup{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.logout{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    li{
+        list-style:none;
+    }
+    a{
+        text-decoration: none;
+        display: block;
+        border: 1px solid $primarycolor;
+        padding: 5px;
+        color: $primarycolor;
+        background-color: transparent;
+    }
+}

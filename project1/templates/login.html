@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+{% block head %}
+{% endblock %}
+{% block aside %}
+<div class="navz">
+    <ul>
+        <li><a class="active" href="home">Login / Register</a></li>
+    </ul>
+</div>
+<div id="drop-content">
+        <form action="{{ url_for('welcome') }}" method="post">
+              <label for="exampleInputEmail1">User ID</label>
+              <input type="text" name="userid" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="exampleInputPassword1">Password</label>
+              <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+        
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+</div>{% endblock %}
+
+{% block content %}
+
+    <h1>YourBooks</h1>
+    <div class="butts">
+        <button>About Us</button>
+        <button>View Books</button>
+    </div>
+{% endblock %}

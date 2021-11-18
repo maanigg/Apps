@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/project.css">
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+    <img src="{{url_for('static', filename='connect.jpg')}}" alt="connect" height=100% width=74%>
+    <div class="aside">
+        {% block aside %}
+        {% endblock %}
+    </div>
+    <div class="content">
+        <div class="title">
+            <h1 class="chat" >Chat</h1><h1 class="mate" >Mate</h1>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer">
+        {% block footer %}
+            
+        {% endblock %}
+    </div>
+</body>
+</html>

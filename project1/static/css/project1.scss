@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,600i,700&display=swap');
+$primary-color:#A9A9A9;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#logo{
+    position: absolute;
+    top: 2%;
+    left: 3%;
+}
+body{
+    height: 100%;
+    width: 100%;
+    h1{
+        position: absolute;
+        top: 1.5%;
+        left: 5.5%;
+        color: $primary-color;
+        font-weight: 500;
+    }
+}
+#content{
+    h1{
+    font-size: xx-large;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    color: $primary-color;
+    }
+}
+.butts{
+    display: flex;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-48%);
+    button{
+        display: block;
+        border: 1px solid $primary-color;
+        padding: 5px;
+        width: 100px;
+        background-color: transparent;
+        color: $primary-color;
+        margin: 10px;
+        cursor: pointer;
+        transition: 0.5s ease;
+        &:hover{
+            color: black;
+            background-color: $primary-color;
+            transition: 0.5s ease;
+        }
+    }
+}
+#footer{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%,-5%);
+    color: $primary-color;
+    text-align: center;
+}
+.nav{
+    position: absolute;
+    top: 3.5%;
+    right: 2.5%;
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: $primary-color;
+            display: block;
+            border: 1px solid $primary-color;
+            padding: 5px;
+            transition: 0.5s ease;
+            cursor: pointer;
+            font-size: small;
+        &:hover{
+            color: black;
+            background-color: $primary-color;
+            transition: 0.5s ease;
+            }
+        }     
+    }
+}
+#drop-content{
+    position: absolute;
+    top: 10%;
+    right:2.5%;
+    form{
+        animation-name: opaque;
+        animation-duration: 2s;
+        background-color: lightgrey;
+        display: inline-flex;
+        border: 1px solid lightgray;
+        flex-direction: column;
+        padding: 20px;
+        label{
+            color: black;
+        }
+        button{
+            margin:10px auto auto auto;
+            display: block;
+            width: 35%;
+            background-color: lightgrey;
+            color: black;
+            border: 1px solid black;
+            cursor: pointer;
+            transition: 0.5s ease;
+            &:hover{
+                color:lightgrey;
+                background-color: black;
+                transition: 0.5s ease;
+            }
+        }
+    }
+}
+.navz{
+    position: absolute;
+    top: 3.5%;
+    right: 2.5%;
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            border: 1px solid $primary-color;
+            background-color: $primary-color;
+            padding: 5px;
+            cursor: pointer;
+            font-size: small;
+        }
+    }
+
+}
+@keyframes opaque{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+.book-details{
+    color: $primary-color;
+    position: absolute;
+    top: 8%;
+    left: 3%;
+    ul li{
+        list-style: none;
+    }
+}
+.reviews{
+    color: $primary-color;
+    .comments{
+        position: absolute;
+        top: 42.5%;
+        left: 5%;
+        ol li{
+            color: $primary-color;
+        }
+    }
+    h1{
+        position: absolute;
+        top: 35%;
+        left: 3%;
+    }
+}
+.review-details{
+    form{
+        position: absolute;
+        top: 24%;
+        left: 3%;
+        display: inline-flex;
+        input{
+            height: 3em;
+            display: block;
+            border: 1px solid $primary-color;
+            background-color: transparent;
+            margin: auto 10px auto auto;
+        }
+        button{
+            display: block;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            background-color: transparent;
+            padding: 5px;
+            transition: 0.5s ease;
+            margin: auto auto auto 10px;
+            cursor: pointer;
+            &:hover{
+                color: black;
+                background-color: $primary-color;
+                transition: 0.5s ease;
+            }
+        }
+    }
+}
+.goodreads{
+    position: absolute;
+    top: 70%;
+    left: 3%;
+    border: 2px solid $primary-color;
+    padding: 10px;
+    color: $primary-color;
+    h4,h6{
+        font-weight: 400;
+    }
+}
+.about{ 
+    h3{
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translate(-1%,-50%);
+    color: $primary-color;
+    font-weight: 400;
+    }
+    h2{
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    transform: translate(-1%,-30%);
+    color: $primary-color;
+    }
+
+}

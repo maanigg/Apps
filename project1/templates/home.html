@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+{% block head %}
+{% endblock %}
+
+
+{% block aside %}
+<div class="nav">
+    <ul>
+        <li><a id="loginl" href="login">Login</a></li>
+        <li><a id="registerl" href="register">Register</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+
+    <h1>YourBooks</h1>
+    <div class="butts">
+        <form action="{{ url_for('about') }}">
+        <button>About Us</button>
+    </form>
+        <form action="{{ url_for('errorp') }}">
+            <button>View Books</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+</head>
+<body>
+    <div class="back-img">
+        <img src="{{url_for('static', filename='booksh.jpg')}}" alt="main">
+        <h1>YB</h1>
+    <div id="logo">
+   {% block body %}<img src="{{url_for('static', filename='logo.svg')}}" alt="logo" height="40" width="30">{% endblock %}
+</div>
+<div id="tings">
+    {% block top %}{% endblock %}
+</div>
+<div class="navs">
+    {% block aside %}{% endblock %}
+</div>
+<div id="content">{% block content %}{% endblock %}</div>
+<div id="footer">
+    {% block footer %}
+        &copy; Copyright 2020 by <a href="http://domain.invalid/">HavardX</a>.
+    {% endblock %}
+</div>
+</body>
+</html>

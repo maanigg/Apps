@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+Index
+{% endblock %}
+{% block content %}
+
+<div class="link">
+    <img src="{{url_for('static', filename='link.svg')}}" alt="link" height="150" width="200">
+</div>
+<div class="intro-text">
+<h1>Welcome to the</h1>
+<h1>World of Congruence.</h1>
+<h1>Stop Competing.</h1>
+<h1>Start Connecting.</h1>
+</div>
+<form action="{{url_for('login')}}" method="GET">
+    <button class="connect">Connect</button>
+</form>
+{% endblock %}
+{% block footer %}
+            &copy; Copyright 2020 by <a href="https://www.edx.org/school/harvardx">HavardX</a>
+{% endblock %}

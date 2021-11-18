@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}
+Login
+{% endblock %}
+{% block content %}
+
+<div class="link">
+    <img src="{{url_for('static', filename='fingerprint.svg')}}" alt="fingerprint" height="150" width="200">
+</div>
+<div class="intro-text">
+    <form action="{{ url_for('login') }}" method="POST">
+        <label for="">Enter Username</label>
+        <input type="text" name="username">
+        <button>login</button>
+        {{message}}
+    </form>
+</div>
+{% endblock %}
+{% block footer %}
+            &copy; Copyright 2020 by <a href="https://www.edx.org/school/harvardx">HavardX</a>
+{% endblock %}

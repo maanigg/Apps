@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+{% block aside %}
+<div class="logout">
+<li><a href="{{ url_for('logout')}}">Logout</a></li>
+</div>
+{% endblock %}
+{% block content %}
+<h1>Channels</h1>
+{{ channels }}
+<ul>
+    <li id="new-channel"></li>
+</ul>
+
+<form id="create_channel">
+    <input type="text" name="channel" id="channel">
+    <button>Create</button>
+</form>
+{{message}}
+<script src="url_for('static', filename='app.js')">
+    
+</script>
+{% endblock %}
